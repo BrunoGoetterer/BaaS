@@ -19,6 +19,6 @@ body {
 }
 
 /* Style for expired or used vouchers */
-.highlight {
-    background-color: #ffcccc !important;  /* Ensure higher specificity */
+.highlight td {
+    background-color: #ffcccc !important; 
 }
