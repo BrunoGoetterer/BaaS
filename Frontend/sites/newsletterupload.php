@@ -2,15 +2,15 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-// Include your database connection file
+
 require_once("../../Backend/config/dbaccess.php"); 
-// Checks if there is a current user stored in the session. If there is, it assigns that user to the $currentUser variable.
+
 if (isset($_SESSION["currentUser"])) {
   $currentUser = $_SESSION["currentUser"];
 }
-// Checks if a user is logged and if he is an admin, if not redirect to login.php
+
 if (!isset($currentUser) || $currentUser["role"] !== 1) {
-  // Redirect to login.php
+  
   header('Location: login.php');
   return;
 }
@@ -28,6 +28,8 @@ if (!isset($currentUser) || $currentUser["role"] !== 1) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../../Frontend/CSS/productupload.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
