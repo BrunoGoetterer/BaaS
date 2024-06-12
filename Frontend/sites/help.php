@@ -14,30 +14,8 @@
         crossorigin="anonymous"></script>
 
 
-    <style>
-        .navbar-custom {
-            background-color: rgb(34, 74, 110);
-        }
-
-        .accordion {
-            margin-top: 120px;
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-
-        body {
-            margin-left: 50px;
-            margin-right: 50px;
-            background-image: url("../../Frontend/Bilder/background2.jpg");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            color: white;
-        }
-    </style>
-
+    
+    <link rel="stylesheet" type="text/css" href="../CSS/help.css">
 </head>
 
 <body>

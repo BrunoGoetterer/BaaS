@@ -1,0 +1,51 @@
+/* CSS for warenkorb.css */
+
+        .parallax {
+            /* The image used */
+            background-color: transparent;
+
+            /* Set a specific height and create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+        body {
+            padding-top: 150px;
+            margin-left: 50px;
+            margin-right: 50px;
+            height: 100px;
+            size: 100px;
+            background-image: url("Bilder/background2.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .navbar-custom {
+            background-color: rgb(34, 74, 110);
+        }
+
+        .images {
+            display: flex;
+            margin-top: 150px;
+            flex-wrap: wrap;
+            vertical-align: middle;
+            justify-content: center;
+        }
+
+        #hello {
+                margin-top: 25px;
+                margin-bottom: 20px;
+                text-align: center;
+                font-size: 55px;
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                font-style: italic;
+                text-shadow: 2px 2px 4px #000000;
+            }
+            .form-group {
+        margin-bottom: 2%;
+    }

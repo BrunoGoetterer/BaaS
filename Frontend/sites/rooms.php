@@ -11,45 +11,7 @@
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 
-    <style>
-.parallax {
-            /* The image used */
-            background-color:transparent;
-    
-            /* Set a specific height and create the parallax scrolling effect */
-            height: 100vh;
-            background-attachment: absolute;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-          
-        }
-
-        body {
-            margin-left:50px;
-            margin-right:50px;
-            height:100px;
-            size:100px;
-            background-image: url("Bilder/background2.jpg");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-
-        .navbar-custom {
-            background-color: rgb(34, 74, 110);
-            opacity: 0.9;
-        }
-
-        .card {
-          margin-left:5%;
-          margin-top:30%;
-          width: 70%;
-          height: 80%;
-          border-color: rgb(34, 74, 110);
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="../CSS/rooms.css">
 </head>
 
 <body>
@@ -72,7 +34,7 @@
         </div>
         <div class="card-footer d-flex align-items-center">
     <small class="text-body-secondary">250€ per night</small>
-    <a href="booking.php" class="btn btn-primary" style="margin-left: auto; display: block;">Book Room</a>
+    <a href="bestellung.php" class="btn btn-primary" style="margin-left: auto; display: block;">Book Room</a>
 </div>
     </div>
 </div>
@@ -87,7 +49,7 @@
         </div>
         <div class="card-footer d-flex align-items-center">
     <small class="text-body-secondary">450€ per night</small>
-    <a href="booking.php" class="btn btn-primary" style="margin-left: auto; display: block;">Book Room</a>
+    <a href="bestellung.php" class="btn btn-primary" style="margin-left: auto; display: block;">Book Room</a>
 </div>
     </div>
 </div>
@@ -102,7 +64,7 @@
         </div>
         <div class="card-footer d-flex align-items-center">
     <small class="text-body-secondary">650€ per night</small>
-    <a href="booking.php" class="btn btn-primary" style="margin-left: auto; display: block;">Book Room</a>
+    <a href="bestellung.php" class="btn btn-primary" style="margin-left: auto; display: block;">Book Room</a>
 </div>
     </div>
 </div>

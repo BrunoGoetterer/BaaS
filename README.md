@@ -1,12 +1,12 @@
 
 ```
-Webtechie
+WebtechieNeu
 ├─ Backend
 │  ├─ config
-│  │  ├─ booking_update.php
+│  │  ├─ bestellung_update.php
 │  │  ├─ dbaccess.php
-│  │  ├─ insert_booking.php
-│  │  ├─ insert_newsletter.php
+│  │  ├─ insert_bestellung.php
+│  │  ├─ insert_product.php
 │  │  ├─ insert_user.php
 │  │  ├─ user_update.php
 │  │  └─ user_updateprofile.php
@@ -18,6 +18,7 @@ Webtechie
 │  │  ├─ profile_logic.php
 │  │  ├─ session_status.php
 │  │  ├─ showproducts.php
+│  │  ├─ user_management_logic.php
 │  │  └─ voucher_logic.php
 │  └─ uploads
 │     └─ products
@@ -53,6 +54,9 @@ Webtechie
 │  │  ├─ welcome.jpg
 │  │  └─ welcomeLego.png
 │  ├─ CSS
+│  │  ├─ bestellung.css
+│  │  ├─ help.css
+│  │  ├─ impressum.css
 │  │  ├─ index.css
 │  │  ├─ login.css
 │  │  ├─ navbar.css
@@ -60,30 +64,30 @@ Webtechie
 │  │  ├─ productupload.css
 │  │  ├─ profile.css
 │  │  ├─ registration.css
+│  │  ├─ rooms.css
 │  │  ├─ showproducts.css
 │  │  ├─ style.css
-│  │  └─ vouchers.css
+│  │  ├─ user_management.css
+│  │  ├─ vouchers.css
+│  │  └─ warenkorb.css
 │  ├─ js
 │  │  └─ vouchers.js
 │  └─ sites
-│     ├─ booking.php
+│     ├─ bestellung.php
 │     ├─ bootstrap.html
 │     ├─ grid.html
 │     ├─ help.php
 │     ├─ impressum.php
 │     ├─ index.php
 │     ├─ login.php
-│     ├─ myreservations.php
-│     ├─ newsletter.php
-│     ├─ newsletterupload.php
+│     ├─ product.php
+│     ├─ productupload.php
 │     ├─ profile.php
 │     ├─ registration.php
 │     ├─ rooms.php
 │     ├─ user_management.php
-│     └─ vouchers.php
-├─ Grid
-├─ uploads
-│  └─ news
+│     ├─ vouchers.php
+│     └─ warenkorb.php
 ├─ webtechie.sql
 └─ Webtechnologie.iml
 

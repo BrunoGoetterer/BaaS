@@ -34,7 +34,7 @@ if (session_status() == PHP_SESSION_NONE) {
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="../../Frontend/sites/newsletter.php">
+                    <a class="nav-link active" href="../../Frontend/sites/product.php">
                         <img src="../../Frontend/Bilder/box.svg" style="padding 5px; width:30px; height:30px;"> Products
                     </a>
                 </li>
@@ -42,7 +42,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <?php if (isset($_SESSION['currentUser'])): ?>
                     <?php if ($_SESSION['currentUser']['role'] === 1): ?>
                         <li class="nav-item">
-                            <a class="nav-link active" href="../../Frontend/sites/newsletterupload.php">
+                            <a class="nav-link active" href="../../Frontend/sites/productupload.php">
                                 <img src="../../Frontend/Bilder/box-arrow-up.svg" style="padding 5px; width:30px; height:30px;"> Product Upload
                             </a>
                         </li>
