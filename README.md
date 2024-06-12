@@ -24,7 +24,8 @@ Webtechie
 │        ├─ 11027_alt1.png
 │        ├─ Kipplaster.png
 │        ├─ legomale.jpg
-│        └─ LegoSet2.jpg
+│        ├─ LegoSet2.jpg
+│        └─ legoset3.png
 ├─ Boxmodel
 │  ├─ boxmodel.css
 │  └─ boxmodel.html
@@ -52,6 +53,7 @@ Webtechie
 │  │  ├─ welcome.jpg
 │  │  └─ welcomeLego.png
 │  ├─ CSS
+│  │  ├─ index.css
 │  │  ├─ login.css
 │  │  ├─ navbar.css
 │  │  ├─ product.css
