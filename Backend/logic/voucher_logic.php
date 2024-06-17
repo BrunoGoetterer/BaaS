@@ -11,15 +11,20 @@ function generateVoucherCode($length = 5) {
     $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
     $randomString = '';
-    for ($i = 0; $i < $length; $i++) {
+    for ($i = 0; $length > $i; $i++) {
         $randomString .= $characters[rand(0, $charactersLength - 1)];
     }
     return $randomString;
 }
 
+// Use the consistent connection variable name
+if (!isset($connection)) {
+    die("Database connection failed");
+}
+
 // Update status of expired vouchers
 $currentDate = date('Y-m-d');
-$stmt = $conn->prepare("UPDATE vouchers SET status = 'expired' WHERE expiry_date < ? AND status = 'valid'");
+$stmt = $connection->prepare("UPDATE vouchers SET status = 'expired' WHERE expiry_date < ? AND status = 'valid'");
 $stmt->bind_param("s", $currentDate);
 $stmt->execute();
 $stmt->close();
@@ -29,18 +34,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $expiry_date = $_POST['expiry_date'];
     $code = generateVoucherCode();
 
-    $stmt = $conn->prepare("INSERT INTO vouchers (code, value, expiry_date) VALUES (?, ?, ?)");
+    $stmt = $connection->prepare("INSERT INTO vouchers (code, value, expiry_date) VALUES (?, ?, ?)");
     $stmt->bind_param("sds", $code, $value, $expiry_date);
 
     if ($stmt->execute()) {
         $message = "Voucher created successfully!";
     } else {
-        $message = "Error creating voucher: " . $conn->error;
+        $message = "Error creating voucher: " . $connection->error;
     }
 
     $stmt->close();
 }
 
-$result = $conn->query("SELECT * FROM vouchers");
+$result = $connection->query("SELECT * FROM vouchers");
 $vouchers = $result->fetch_all(MYSQLI_ASSOC);
 ?>

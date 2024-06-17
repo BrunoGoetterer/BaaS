@@ -4,7 +4,6 @@
 
 <!-- Hier kommt in die Seite "Meine Bestellungen" hin, Logik ist bereits vorhanden allerdings noch veraltete Datenbank  -->
 
-
 <head>
     <link rel="icon" href="Bilder/tsunami.svg">
     <meta charset="UTF-8">

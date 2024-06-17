@@ -65,7 +65,7 @@ if ($stmt->execute()) {
 
     // Set success message in session
     $_SESSION['status'] = 'success';
-    $_SESSION['message'] = 'Booking was submitted successfully!';
+    $_SESSION['message'] = 'Order was submitted successfully!';
 
     // Redirect back to the booking page
     header("Location: ../bestellung.php");

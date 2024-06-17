@@ -10,7 +10,7 @@ $currentUser = isset($_SESSION['currentUser']) ? $_SESSION['currentUser'] : null
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require_once '../../Backend/config/user_updateprofile.php';
 
-    // Redirect to profile page to avoid form resubmission
+    // Redirect to profile page after update logic
     header('Location: profile.php');
     exit;
 }
@@ -18,7 +18,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // Fetch the current status and message from the session
 $status = isset($_SESSION['status']) ? $_SESSION['status'] : null;
 $message = isset($_SESSION['message']) ? $_SESSION['message'] : null;
-
-// Unset the status and message session variables
-unset($_SESSION['status'], $_SESSION['message']);
 ?>
