@@ -23,7 +23,7 @@
     ?>
 
     <div class="container">
-        <?php include "../../Backend/logic/alert.php"; // Include the alert.php file ?>
+        <?php displayAlert(); // Call the function to display alerts ?>
 
         <?php
         // Check if the query was successful

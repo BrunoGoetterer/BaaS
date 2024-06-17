@@ -25,10 +25,8 @@ WebtechieNeu
 │        ├─ 11027_alt1.png
 │        ├─ Kipplaster.png
 │        ├─ legomale.jpg
-│        ├─ legoset11.png
 │        ├─ LegoSet2.jpg
-│        ├─ legoset3.png
-│        └─ republicfightertank.jpg
+│        └─ legoset3.png
 ├─ Boxmodel
 │  ├─ boxmodel.css
 │  └─ boxmodel.html
@@ -56,7 +54,7 @@ WebtechieNeu
 │  │  ├─ welcome.jpg
 │  │  └─ welcomeLego.png
 │  ├─ CSS
-│  │  ├─ bestellungen.css
+│  │  ├─ bestellung.css
 │  │  ├─ help.css
 │  │  ├─ impressum.css
 │  │  ├─ index.css
@@ -70,12 +68,14 @@ WebtechieNeu
 │  │  ├─ showproducts.css
 │  │  ├─ style.css
 │  │  ├─ user_management.css
-│  │  └─ vouchers.css
+│  │  ├─ vouchers.css
+│  │  └─ warenkorb.css
 │  ├─ js
-│  │  ├─ profile.js
 │  │  └─ vouchers.js
 │  └─ sites
-│     ├─ bestellungen.php
+│     ├─ bestellung.php
+│     ├─ bootstrap.html
+│     ├─ grid.html
 │     ├─ help.php
 │     ├─ impressum.php
 │     ├─ index.php
@@ -86,7 +86,8 @@ WebtechieNeu
 │     ├─ registration.php
 │     ├─ rooms.php
 │     ├─ user_management.php
-│     └─ vouchers.php
+│     ├─ vouchers.php
+│     └─ warenkorb.php
 ├─ webtechie.sql
 └─ Webtechnologie.iml
 

@@ -19,62 +19,57 @@
 
     <div class="hello">
         <?php if ($currentUser): ?>
-            <div class="container" style="margin-top: 120px;" id="hello">
-                Welcome to <?= htmlspecialchars($currentUser["username"]) ?>'s profile page!
+            <div class="container"  style=" margin-top: 120px;" id="hello">
+                Welcome to <?= $currentUser["username"] ?>'s profile page!
             </div>
 
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-6 col-sm-12" style="background-color: #f8f9fa; color: #343a40; border-radius: 15px;">
-                    <form id="profileForm" action="profile.php" method="post">
+                    <form action="profile.php" method="post">
                         <?php if ($status): ?>
                             <div class="alert alert-<?= $status === 'error' ? 'danger' : 'success' ?>" role="alert">
-                                <?= htmlspecialchars($message) ?>
+                                <?= $message ?>
                             </div>
-                            <?php
-                            // Unset the status and message session variables after displaying them
-                            unset($_SESSION['status'], $_SESSION['message']);
-                            ?>
                         <?php endif; ?>
 
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" name="username" value="<?= htmlspecialchars($currentUser["username"]) ?>" disabled>
+                            <input type="text" class="form-control" id="username" name="username" value="<?= $currentUser["username"] ?>" disabled>
                         </div>
                         <div class="form-group">
                             <label for="anrede">Anrede</label>
-                            <input type="text" class="form-control" id="anrede" name="anrede" value="<?= htmlspecialchars($currentUser["anrede"]) ?>">
+                            <input type="text" class="form-control" id="anrede" name="anrede" value="<?= $currentUser["anrede"] ?>">
                         </div>
                         <div class="form-group">
                             <label for="firstname">First Name</label>
-                            <input type="text" class="form-control" id="firstname" name="firstname" value="<?= htmlspecialchars($currentUser["firstname"]) ?>">
+                            <input type="text" class="form-control" id="firstname" name="firstname" value="<?= $currentUser["firstname"] ?>">
                         </div>
                         <div class="form-group">
                             <label for="lastname">Last Name</label>
-                            <input type="text" class="form-control" id="lastname" name="lastname" value="<?= htmlspecialchars($currentUser["lastname"]) ?>">
+                            <input type="text" class="form-control" id="lastname" name="lastname" value="<?= $currentUser["lastname"] ?>">
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" name="useremail" value="<?= htmlspecialchars($currentUser["useremail"]) ?>">
+                            <input type="email" class="form-control" id="email" name="useremail" value="<?= $currentUser["useremail"] ?>">
                         </div>
                         <div class="form-group">
-                            <label for="currentPassword">Current Password</label>
-                            <input type="password" class="form-control" id="currentPassword" name="currentPassword" required>
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" value="password">
                         </div>
                         <div class="form-group" style="margin-top: 20px;">
                             <label for="role">Your user role:</label>
-                            <input type="text" class="form-control" id="role" name="role" value="<?= htmlspecialchars($currentUser["role"] == 1 ? 'Admin' : 'User') ?>" disabled>
+                            <input type="text" class="form-control" id="role" name="role" value="<?= $currentUser["role"] == 1 ? 'Admin' : 'User' ?>" disabled>
                         </div>
                         <div class="buttons">
-                            <button type="submit" class="btn btn-primary">Update User</button>
-                        </div>
+                        <button type="submit" class="btn btn-primary">Update User</button>
+                        
                     </form>
-                    <a href="bestellungen.php" class="btn btn-info">My Orders</a>
+                    <a href="warenkorb.php" class="btn btn-info">My Reservations</a>
+                    </div>
                 </div>
             </div>
         <?php endif; ?>
     </div>
-
-    <script src="../js/profile.js"></script>
 </body>
 
 </html>

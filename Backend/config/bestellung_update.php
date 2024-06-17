@@ -8,37 +8,30 @@ if (!isset($_SESSION['currentUser'])) {
 
 $currentUser = $_SESSION['currentUser'];
 
-require_once("dbaccess.php");
+require_once("../../Backend/config/dbaccess.php");
 
 $connection = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
-if ($connection->connect_error) {
-    die("Connection failed: " . $connection->connect_error);
-}
-
 // Get the submitted data
+$bookingID = $_POST['bookingID'];
 $title = $_POST['title'];
 $price = $_POST['price'];
-$userID = $currentUser['id'];
-$bookingID = $_POST['bookingID'];
+$created_at = $_POST['created_at'];
 
 // SQL query to update the booking
-$update = "UPDATE bookings SET title=?, price=?, userID=? WHERE id=?";
-$stmt = $connection->prepare($update); // prepare statement
+$update = "UPDATE orders SET title=?, price=?, created_at=? WHERE id=?";
+$stmt = $connection->prepare($update);
 
 // Bind parameters
-$stmt->bind_param("sdii", $title, $price, $userID, $bookingID);
+$stmt->bind_param("sdsi", $title, $price, $created_at, $bookingID);
 
 if ($stmt->execute()) {
-    // Check if execution of prepared statement was successful 
-
     // Set success message in session
     $_SESSION['status'] = 'success';
     $_SESSION['message'] = 'Order updated successfully!';
 
     // Redirect back to the user management page
     header("Location: ../../Frontend/sites/user_management.php");
-    exit();
 } else {
     // If an error exists, set error message in session
     $_SESSION['status'] = 'error';
@@ -46,6 +39,5 @@ if ($stmt->execute()) {
 
     // Redirect back to the user management page
     header("Location: ../../Frontend/sites/user_management.php");
-    exit();
 }
 ?>

@@ -68,12 +68,12 @@ if ($stmt->execute()) {
     $_SESSION['message'] = 'Booking was submitted successfully!';
 
     // Redirect back to the booking page
-    header("Location: ../bestellung.php");
+    header("Location: ../booking.php");
 } else {
     // If an error exists, set error message in session
     $_SESSION['status'] = 'error';
     $_SESSION['message'] = 'An error occurred trying update! Please try again or contact support.';
 
     // Redirect back to the booking page
-    header("Location: ../bestellung.php");
+    header("Location: ../booking.php");
 }

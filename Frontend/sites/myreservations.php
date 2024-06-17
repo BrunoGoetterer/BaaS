@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- Hier kommt in die Seite "Meine Bestellungen" hin, Logik ist bereits vorhanden allerdings noch veraltete Datenbank  -->
-
-
 <head>
     <link rel="icon" href="Bilder/tsunami.svg">
     <meta charset="UTF-8">
@@ -18,9 +14,58 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
-    
+    <style>
+        .parallax {
+            /* The image used */
+            background-color: transparent;
 
-    <link rel="stylesheet" type="text/css" href="../CSS/bestellungen.css">
+            /* Set a specific height and create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+        body {
+            padding-top: 150px;
+            margin-left: 50px;
+            margin-right: 50px;
+            height: 100px;
+            size: 100px;
+            background-image: url("Bilder/background2.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .navbar-custom {
+            background-color: rgb(34, 74, 110);
+        }
+
+        .images {
+            display: flex;
+            margin-top: 150px;
+            flex-wrap: wrap;
+            vertical-align: middle;
+            justify-content: center;
+        }
+
+        #hello {
+                margin-top: 25px;
+                margin-bottom: 20px;
+                text-align: center;
+                font-size: 55px;
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                font-style: italic;
+                text-shadow: 2px 2px 4px #000000;
+            }
+            .form-group {
+        margin-bottom: 2%;
+    }
+    </style>
+
 </head>
 
 
@@ -69,7 +114,7 @@
                   </button>
                   <div class='collapse' id='booking<?= $bookingCount ?>'>
                     <div class='card card-body' style='width: 70%; margin: auto;'>
-                    <form action='../../Backend/config//bestellung_update.php' method='post'>
+                    <form action='../../Backend/config//booking_update.php' method='post'>
                     <input type='hidden' name='bookingID' value='<?= $row_booking["id"] ?>' disabled>
                     <label for='quantity'>Quantity:</label>
                     <input type='text' id='quantity' name='quantity' value='<?= $row_booking["quantity"] ?>' disabled><br>
